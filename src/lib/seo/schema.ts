@@ -50,6 +50,35 @@ export function buildWebPageSchema({ name, description, path }: WebPageSchemaInp
   };
 }
 
+type ArticleSchemaInput = {
+  headline: string;
+  description: string;
+  path: string;
+};
+
+export function buildArticleSchema({
+  headline,
+  description,
+  path,
+}: ArticleSchemaInput) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline,
+    description,
+    url: getCanonicalUrl(path),
+    mainEntityOfPage: getCanonicalUrl(path),
+    author: {
+      "@type": "Organization",
+      name: "drawDB",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "drawDB",
+    },
+  };
+}
+
 type WebApplicationSchemaInput = {
   name: string;
   description: string;
