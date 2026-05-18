@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-sans: "Inter", "Segoe UI", sans-serif;
+  --font-heading: "Space Grotesk", "Avenir Next", "Segoe UI", sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --background: #0b0d10;
+  --foreground: #f3f6fb;
+  --card: #11151b;
+  --card-foreground: #f3f6fb;
+  --popover: #151a21;
+  --popover-foreground: #f3f6fb;
+  --primary: #2f6bff;
+  --primary-foreground: #f8fbff;
+  --secondary: #151a21;
+  --secondary-foreground: #d9e1ec;
+  --muted: #12161d;
+  --muted-foreground: #93a0b2;
+  --accent: #22d3ee;
+  --accent-foreground: #06121b;
+  --border: rgba(163, 173, 186, 0.16);
+  --input: rgba(163, 173, 186, 0.18);
+  --ring: rgba(47, 107, 255, 0.55);
+  --radius: 1rem;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(47, 107, 255, 0.18), transparent 25%),
+    radial-gradient(circle at 20% 20%, rgba(34, 211, 238, 0.09), transparent 20%),
+    linear-gradient(180deg, #0b0d10 0%, #0d1117 100%);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: radial-gradient(rgba(163, 173, 186, 0.1) 1px, transparent 1px);
+  background-size: 22px 22px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55), transparent 85%);
+  pointer-events: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: rgba(47, 107, 255, 0.35);
+}
+
+.surface-grid {
+  background-image:
+    linear-gradient(rgba(163, 173, 186, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(163, 173, 186, 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.container-shell {
+  margin-inline: auto;
+  width: min(100% - 2rem, 1200px);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
