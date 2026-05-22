@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "@/app/globals.css";
 
 import { SiteAnalytics } from "@/components/analytics/site-analytics";
+import { SiteAdsense } from "@/components/analytics/site-adsense";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { createMetadata } from "@/lib/seo/metadata";
@@ -26,6 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <SiteAdsense clientId={process.env.NEXT_PUBLIC_ADSENSE_CLIENT} />
+      </head>
       <body>
         <SiteHeader />
         <main>{children}</main>
