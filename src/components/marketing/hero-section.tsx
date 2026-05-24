@@ -55,8 +55,8 @@ export function HeroSection() {
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Button asChild size="lg">
-              <Link href="/tools">
-                Explore Popular Tools
+              <Link href="/app/editor/templates/blank?mode=blank&database=postgresql">
+                Open The Editor
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>

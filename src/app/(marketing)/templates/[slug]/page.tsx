@@ -18,6 +18,7 @@ import {
 } from "@/data/templates";
 import { relatedToolSummaries } from "@/data/tools";
 import { buildBreadcrumbs } from "@/lib/seo/breadcrumbs";
+import { getTemplateEditorHref } from "@/lib/editor/links";
 import { createMetadata } from "@/lib/seo/metadata";
 import {
   buildBreadcrumbSchema,
@@ -131,6 +132,7 @@ export default async function TemplateDetailPage({ params }: TemplatePageProps) 
   const relatedTools = relatedToolSummaries.filter((item) =>
     template.relatedToolSlugs.includes(item.slug),
   );
+  const editorHref = getTemplateEditorHref(template);
 
   const webPageSchema = buildWebPageSchema({
     name: template.shortTitle,
@@ -165,8 +167,8 @@ export default async function TemplateDetailPage({ params }: TemplatePageProps) 
               </div>
               <div className="flex flex-col gap-3 sm:flex-row">
                 <Button asChild size="lg">
-                  <Link href="/templates">
-                    Browse More Templates
+                  <Link href={editorHref}>
+                    Open In Editor
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
@@ -195,11 +197,11 @@ export default async function TemplateDetailPage({ params }: TemplatePageProps) 
                   <div>
                     <p className="font-heading text-xl font-semibold text-white">Template hero</p>
                     <p className="mt-1 text-sm text-muted-foreground">
-                      Visual schema preview for long-tail template discovery.
+                      Load this schema into the real drawDB editor and keep editing from there.
                     </p>
                   </div>
                   <span className="rounded-full bg-blue-500/15 px-3 py-1 text-xs font-semibold text-blue-100">
-                    Static preview
+                    Live template
                   </span>
                 </div>
                 <TemplatePreview tableNames={template.tables.map((table) => table.name)} />

@@ -1,7 +1,9 @@
+import Link from "next/link";
 import { CirclePlay, FileJson2, GitCompareArrows, PanelsTopLeft } from "lucide-react";
 
 import { AdPlaceholder } from "@/components/ads/ad-placeholder";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { SectionHeading } from "@/components/marketing/section-heading";
 
@@ -17,9 +19,9 @@ export function EditorPreviewSection() {
       <div className="container-shell grid gap-8 xl:grid-cols-[1.1fr,0.9fr]">
         <Card className="overflow-hidden p-6">
           <SectionHeading
-            description="We are not building the editor yet, but the homepage still needs a product anchor that previews the future /app experience."
+            description="The marketing site now routes into a real embedded drawDB workspace under /app, so visitors can move from discovery into action."
             eyebrow="Editor Preview"
-            title="A product-first preview that signals the tool is real."
+            title="A live editor path that turns SEO traffic into product usage."
           />
           <div className="mt-8 grid gap-6 lg:grid-cols-[220px,1fr,220px]">
             <div className="rounded-[1.25rem] border border-white/8 bg-white/4 p-4">
@@ -40,10 +42,15 @@ export function EditorPreviewSection() {
                   <div>
                     <p className="font-heading text-xl font-semibold text-white">Interactive ERD preview</p>
                     <p className="mt-2 max-w-sm text-sm leading-7 text-muted-foreground">
-                      This surface becomes the live editor experience later. For now it anchors the
-                      homepage with a clear product narrative.
+                      Open the real editor to sketch tables, load templates, and export SQL for
+                      PostgreSQL, MySQL, or SQLite workflows.
                     </p>
                   </div>
+                  <Button asChild size="sm">
+                    <Link href="/app/editor/templates/blank?mode=blank&database=postgresql">
+                      Open Editor
+                    </Link>
+                  </Button>
                 </div>
               </div>
             </div>

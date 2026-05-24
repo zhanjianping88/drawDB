@@ -14,6 +14,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { templateSummaries } from "@/data/templates";
 import { getToolPageBySlug, relatedToolSummaries, toolPages } from "@/data/tools";
 import { buildBreadcrumbs } from "@/lib/seo/breadcrumbs";
+import { getToolEditorHref } from "@/lib/editor/links";
 import { createMetadata } from "@/lib/seo/metadata";
 import { buildBreadcrumbSchema, buildFaqSchema, buildWebApplicationSchema } from "@/lib/seo/schema";
 
@@ -121,6 +122,7 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
     tool.relatedTemplateSlugs.includes(template.slug),
   );
   const relatedTools = relatedToolSummaries.filter((item) => tool.relatedToolSlugs.includes(item.slug));
+  const editorHref = getToolEditorHref(tool);
 
   const faqSchema = buildFaqSchema(tool.faqs);
   const breadcrumbSchema = buildBreadcrumbSchema(breadcrumbs);
@@ -155,8 +157,8 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
               </div>
               <div className="flex flex-col gap-3 sm:flex-row">
                 <Button asChild size="lg">
-                  <Link href="/tools">
-                    {tool.heroCtaLabel}
+                  <Link href={editorHref}>
+                    Open In Editor
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
@@ -182,11 +184,11 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
                   <div>
                     <p className="font-heading text-xl font-semibold text-white">Tool hero</p>
                     <p className="mt-1 text-sm text-muted-foreground">
-                      Product-led SEO page structure for PostgreSQL queries.
+                      Launch a real editor session with the database workflow pre-selected.
                     </p>
                   </div>
                   <span className="rounded-full bg-blue-500/15 px-3 py-1 text-xs font-semibold text-blue-100">
-                    Live template
+                    Live editor
                   </span>
                 </div>
                 <SchemaEditorPreview />
