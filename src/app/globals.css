@@ -18,8 +18,8 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --font-sans: "Inter", "Segoe UI", sans-serif;
-  --font-heading: "Space Grotesk", "Avenir Next", "Segoe UI", sans-serif;
+  --font-sans: "Plus Jakarta Sans", "Inter", "Segoe UI", sans-serif;
+  --font-heading: "Space Grotesk", "Plus Jakarta Sans", "Avenir Next", "Segoe UI", sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -45,6 +45,9 @@
   --input: rgba(163, 173, 186, 0.18);
   --ring: rgba(47, 107, 255, 0.55);
   --radius: 1rem;
+  --grid-line: rgba(163, 173, 186, 0.06);
+  --panel-edge: rgba(255, 255, 255, 0.08);
+  --panel-fill: rgba(11, 16, 24, 0.82);
 }
 
 * {
@@ -58,9 +61,10 @@ html {
 body {
   min-height: 100vh;
   background:
-    radial-gradient(circle at top, rgba(47, 107, 255, 0.18), transparent 25%),
-    radial-gradient(circle at 20% 20%, rgba(34, 211, 238, 0.09), transparent 20%),
-    linear-gradient(180deg, #0b0d10 0%, #0d1117 100%);
+    radial-gradient(circle at top, rgba(47, 107, 255, 0.2), transparent 24%),
+    radial-gradient(circle at 14% 18%, rgba(34, 211, 238, 0.11), transparent 18%),
+    radial-gradient(circle at 82% 8%, rgba(255, 164, 77, 0.08), transparent 16%),
+    linear-gradient(180deg, #090b0f 0%, #0d1117 42%, #0a0d13 100%);
   color: var(--foreground);
   font-family: var(--font-sans);
   text-rendering: optimizeLegibility;
@@ -71,9 +75,20 @@ body::before {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background-image: radial-gradient(rgba(163, 173, 186, 0.1) 1px, transparent 1px);
+  background-image: radial-gradient(rgba(163, 173, 186, 0.11) 1px, transparent 1px);
   background-size: 22px 22px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.55), transparent 85%);
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.72), transparent 88%);
+  pointer-events: none;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, transparent 0%, rgba(47, 107, 255, 0.04) 48%, transparent 100%),
+    linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.03) 100%);
   pointer-events: none;
 }
 
@@ -92,8 +107,8 @@ button {
 
 .surface-grid {
   background-image:
-    linear-gradient(rgba(163, 173, 186, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(163, 173, 186, 0.05) 1px, transparent 1px);
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
   background-size: 28px 28px;
 }
 
@@ -104,4 +119,62 @@ button {
 
 .text-balance {
   text-wrap: balance;
+}
+
+.panel-glow {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.03),
+    0 24px 64px rgba(0, 0, 0, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+
+.mesh-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01)),
+    linear-gradient(135deg, rgba(47, 107, 255, 0.12), transparent 42%),
+    linear-gradient(225deg, rgba(34, 211, 238, 0.08), transparent 40%),
+    var(--panel-fill);
+  border: 1px solid var(--panel-edge);
+}
+
+.scanline {
+  position: relative;
+  overflow: hidden;
+}
+
+.scanline::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.035), transparent);
+  transform: translateY(-100%);
+  animation: scanline 9s linear infinite;
+  pointer-events: none;
+}
+
+.data-pulse {
+  position: relative;
+}
+
+.data-pulse::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.4), rgba(47, 107, 255, 0.08), transparent 72%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-105%);
+  }
+
+  100% {
+    transform: translateY(105%);
+  }
 }

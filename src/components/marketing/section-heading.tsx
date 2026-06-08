@@ -16,7 +16,8 @@ export function SectionHeading({
   const alignment = align === "center" ? "mx-auto text-center" : "";
 
   return (
-    <div className={`max-w-2xl space-y-4 ${alignment}`}>
+    <div className={`max-w-2xl space-y-5 ${alignment}`}>
+      <div className={align === "center" ? "mx-auto h-px w-28 bg-gradient-to-r from-transparent via-cyan-300/60 to-transparent" : "h-px w-24 bg-gradient-to-r from-cyan-300/70 to-transparent"} />
       <Badge className={align === "center" ? "mx-auto" : ""} variant="blue">
         {eyebrow}
       </Badge>
@@ -24,7 +25,7 @@ export function SectionHeading({
         <h2 className="font-heading text-3xl font-semibold tracking-tight text-white md:text-4xl">
           {title}
         </h2>
-        <p className="text-base leading-7 text-muted-foreground md:text-lg">{description}</p>
+        <p className="text-base leading-7 text-muted-foreground/95 md:text-lg">{description}</p>
       </div>
     </div>
   );
