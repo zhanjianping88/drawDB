@@ -1,7 +1,7 @@
 import { createMetadata } from "@/lib/seo/metadata";
 
 export const metadata = createMetadata({
-  title: "drawDB Pricing | Future Premium Surface",
+  title: "SchemaForge Pricing | Future Premium Surface",
   description: "Placeholder pricing route for future premium features and paid plans.",
   path: "/pricing",
 });

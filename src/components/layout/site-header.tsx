@@ -13,7 +13,7 @@ export function SiteHeader() {
             <DatabaseZap className="h-5 w-5 text-cyan-300" />
           </span>
           <div>
-            <p className="font-heading text-lg font-semibold tracking-tight">drawDB</p>
+            <p className="font-heading text-lg font-semibold tracking-tight">SchemaForge</p>
             <p className="text-xs text-muted-foreground">Schema design, ERD, SQL tooling</p>
           </div>
         </Link>

@@ -1,4 +1,4 @@
-const defaultSiteUrl = "https://drawdb.example.com";
+const defaultSiteUrl = "https://schemaforge.cc";
 
 export function getSiteUrl() {
   const value = process.env.NEXT_PUBLIC_SITE_URL?.trim();
@@ -11,7 +11,7 @@ export function getSiteUrl() {
 }
 
 export const siteConfig = {
-  name: "drawDB",
+  name: "SchemaForge",
   url: getSiteUrl(),
   description:
     "Production-grade database schema generator, ERD tool, and SQL design platform built for modern engineering teams.",

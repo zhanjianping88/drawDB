@@ -102,9 +102,9 @@ export const featureItems = [
 
 export const faqItems = [
   {
-    question: "What is drawDB for?",
+    question: "What is SchemaForge for?",
     answer:
-      "drawDB is being positioned as a modern online database design platform for schema generation, ER diagrams, SQL exports, and reusable templates.",
+      "SchemaForge is a modern online database design platform for schema generation, ER diagrams, SQL exports, and reusable templates.",
   },
   {
     question: "Will the editor be part of this site?",

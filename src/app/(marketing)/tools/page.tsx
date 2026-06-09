@@ -5,7 +5,7 @@ import { ToolDirectory } from "@/components/marketing/tool-directory";
 import { toolPages } from "@/data/tools";
 
 export const metadata = createMetadata({
-  title: "drawDB Tools | Database Schema and ERD Tooling",
+  title: "SchemaForge Tools | Database Schema and ERD Tooling",
   description: "Explore database schema generators, ERD tools, SQL design tools, and engine-specific database workflow pages.",
   path: "/tools",
 });

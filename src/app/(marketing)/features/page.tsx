@@ -1,8 +1,8 @@
 import { createMetadata } from "@/lib/seo/metadata";
 
 export const metadata = createMetadata({
-  title: "drawDB Features | Marketing Platform Foundation",
-  description: "Overview of the first-launch marketing platform for drawDB.",
+  title: "SchemaForge Features | Marketing Platform Foundation",
+  description: "Overview of the first-launch marketing platform for SchemaForge.",
   path: "/features",
 });
 

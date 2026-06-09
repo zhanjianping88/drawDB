@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: ToolPageProps): Promise<Metad
 
   if (!tool) {
     return createMetadata({
-      title: "Tool Not Found | drawDB",
+      title: "Tool Not Found | SchemaForge",
       description: "The requested database tool page could not be found.",
       path: "/tools",
       noIndex: true,
@@ -159,7 +159,7 @@ export default async function ToolDetailPage({ params }: ToolPageProps) {
   const faqSchema = buildFaqSchema(tool.faqs);
   const breadcrumbSchema = buildBreadcrumbSchema(breadcrumbs);
   const webAppSchema = buildWebApplicationSchema({
-    name: `drawDB ${tool.shortTitle}`,
+    name: `SchemaForge ${tool.shortTitle}`,
     description: tool.description,
     path: tool.path,
     keywords: tool.keywords,

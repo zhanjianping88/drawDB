@@ -63,7 +63,7 @@ function coreFaqs(subject: string, answer: string): GuideFaq[] {
 export const guidePages: GuidePage[] = [
   guide({
     slug: "how-to-design-a-database-schema",
-    title: "How to Design a Database Schema | drawDB Guide",
+    title: "How to Design a Database Schema | SchemaForge Guide",
     h1: "How to design a database schema that stays clean as your product grows",
     description:
       "Learn how to design a database schema with clearer entities, relationships, normalization decisions, and implementation-ready structure.",
@@ -160,7 +160,7 @@ export const guidePages: GuidePage[] = [
   }),
   guide({
     slug: "how-to-create-an-er-diagram",
-    title: "How to Create an ER Diagram | drawDB Guide",
+    title: "How to Create an ER Diagram | SchemaForge Guide",
     h1: "How to create an ER diagram that actually improves your schema design",
     description:
       "Learn how to create an ER diagram for relational systems with better entity naming, relationship mapping, and review workflows.",
@@ -245,7 +245,7 @@ export const guidePages: GuidePage[] = [
   }),
   guide({
     slug: "database-schema-design-best-practices",
-    title: "Database Schema Design Best Practices | drawDB Guide",
+    title: "Database Schema Design Best Practices | SchemaForge Guide",
     h1: "Database schema design best practices for maintainable applications",
     description:
       "Use these database schema design best practices to improve relational clarity, normalization, naming, and long-term maintainability.",
@@ -327,7 +327,7 @@ export const guidePages: GuidePage[] = [
   }),
   guide({
     slug: "database-normalization-guide",
-    title: "Database Normalization Guide | drawDB",
+    title: "Database Normalization Guide | SchemaForge",
     h1: "Database normalization guide for cleaner relational structure",
     description:
       "Understand database normalization with practical examples, tradeoffs, and design guidance for relational systems.",
@@ -419,7 +419,7 @@ export const guidePages: GuidePage[] = [
   }),
   guide({
     slug: "sql-database-design-for-beginners",
-    title: "SQL Database Design for Beginners | drawDB Guide",
+    title: "SQL Database Design for Beginners | SchemaForge Guide",
     h1: "SQL database design for beginners: how to think before you write schema",
     description:
       "A beginner-friendly guide to SQL database design covering entities, relationships, tables, keys, and practical schema decisions.",
@@ -511,7 +511,7 @@ export const guidePages: GuidePage[] = [
   }),
   guide({
     slug: "ecommerce-database-design-guide",
-    title: "Ecommerce Database Design Guide | drawDB",
+    title: "Ecommerce Database Design Guide | SchemaForge",
     h1: "Ecommerce database design guide for products, orders, inventory, and payments",
     description:
       "Learn how to design an ecommerce database with products, carts, orders, payments, inventory, and customer relationships.",
@@ -596,7 +596,7 @@ export const guidePages: GuidePage[] = [
   }),
   guide({
     slug: "crm-database-design-guide",
-    title: "CRM Database Design Guide | drawDB",
+    title: "CRM Database Design Guide | SchemaForge",
     h1: "CRM database design guide for accounts, contacts, deals, and activity history",
     description:
       "Design a CRM database schema with accounts, contacts, deals, ownership, activities, and reporting structure.",
@@ -678,7 +678,7 @@ export const guidePages: GuidePage[] = [
   }),
   guide({
     slug: "saas-database-design-guide",
-    title: "SaaS Database Design Guide | drawDB",
+    title: "SaaS Database Design Guide | SchemaForge",
     h1: "SaaS database design guide for tenants, billing, roles, and product events",
     description:
       "Learn how to design a SaaS database with tenant boundaries, memberships, billing, permissions, and product event structure.",
@@ -760,7 +760,7 @@ export const guidePages: GuidePage[] = [
   }),
   guide({
     slug: "mysql-database-design-guide",
-    title: "MySQL Database Design Guide | drawDB",
+    title: "MySQL Database Design Guide | SchemaForge",
     h1: "MySQL database design guide for cleaner relational schemas",
     description:
       "Use this MySQL database design guide to plan tables, keys, and relationships for maintainable relational systems.",
@@ -826,7 +826,7 @@ export const guidePages: GuidePage[] = [
   }),
   guide({
     slug: "postgresql-database-design-guide",
-    title: "PostgreSQL Database Design Guide | drawDB",
+    title: "PostgreSQL Database Design Guide | SchemaForge",
     h1: "PostgreSQL database design guide for relational depth and long-term schema quality",
     description:
       "Learn how to design PostgreSQL schemas with better relational modeling, normalization, and implementation discipline.",

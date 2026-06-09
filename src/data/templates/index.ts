@@ -46,7 +46,7 @@ const sharedFaqs = (subject: string): TemplateFaq[] => [
       "SQL examples help bridge search intent with implementation detail, making the page more useful for engineers evaluating schema structure.",
   },
   {
-    question: "Will these templates connect to the future drawDB editor?",
+    question: "Will these templates connect to the SchemaForge editor?",
     answer:
       "Yes. The long-term goal is for these template pages to connect directly into the visual editor workflow under /app.",
   },
@@ -55,7 +55,7 @@ const sharedFaqs = (subject: string): TemplateFaq[] => [
 export const templatePages: TemplatePage[] = [
   {
     slug: "ecommerce-database-schema",
-    title: "Ecommerce Database Schema Template | drawDB",
+    title: "Ecommerce Database Schema Template | SchemaForge",
     shortTitle: "Ecommerce Database Schema",
     description:
       "Explore a scalable ecommerce database schema template with users, products, orders, payments, and inventory relationships.",
@@ -118,7 +118,7 @@ CREATE TABLE orders (
   },
   {
     slug: "crm-database-schema",
-    title: "CRM Database Schema Template | drawDB",
+    title: "CRM Database Schema Template | SchemaForge",
     shortTitle: "CRM Database Schema",
     description:
       "Model a CRM database schema for contacts, accounts, deals, activities, ownership, and pipeline visibility.",
@@ -179,7 +179,7 @@ CREATE TABLE deals (
   },
   {
     slug: "saas-database-schema",
-    title: "SaaS Database Schema Template | drawDB",
+    title: "SaaS Database Schema Template | SchemaForge",
     shortTitle: "SaaS Database Schema",
     description:
       "Plan a SaaS database schema for tenants, subscriptions, billing, seats, permissions, and product usage data.",
@@ -240,7 +240,7 @@ CREATE TABLE subscriptions (
   },
   {
     slug: "inventory-management-database-schema",
-    title: "Inventory Management Database Schema Template | drawDB",
+    title: "Inventory Management Database Schema Template | SchemaForge",
     shortTitle: "Inventory Management Database Schema",
     description:
       "Use this inventory management database schema template to model products, stock, warehouses, movements, and purchase orders.",
@@ -300,7 +300,7 @@ CREATE TABLE stock_movements (
   },
   {
     slug: "booking-system-database-schema",
-    title: "Booking System Database Schema Template | drawDB",
+    title: "Booking System Database Schema Template | SchemaForge",
     shortTitle: "Booking System Database Schema",
     description:
       "Design a booking system database schema for reservations, schedules, availability, customers, and payments.",
@@ -360,7 +360,7 @@ CREATE TABLE bookings (
   },
   {
     slug: "school-management-database-schema",
-    title: "School Management Database Schema Template | drawDB",
+    title: "School Management Database Schema Template | SchemaForge",
     shortTitle: "School Management Database Schema",
     description:
       "A school management database schema template for students, classes, schedules, enrollments, grades, and attendance.",
@@ -420,7 +420,7 @@ CREATE TABLE enrollments (
   },
   {
     slug: "hospital-management-database-schema",
-    title: "Hospital Management Database Schema Template | drawDB",
+    title: "Hospital Management Database Schema Template | SchemaForge",
     shortTitle: "Hospital Management Database Schema",
     description:
       "Plan a hospital management database schema for patients, doctors, appointments, admissions, billing, and care records.",
@@ -481,7 +481,7 @@ CREATE TABLE admissions (
   },
   {
     slug: "hr-management-database-schema",
-    title: "HR Management Database Schema Template | drawDB",
+    title: "HR Management Database Schema Template | SchemaForge",
     shortTitle: "HR Management Database Schema",
     description:
       "Use this HR management database schema template for employees, departments, leave, performance, and org structure.",
@@ -541,7 +541,7 @@ CREATE TABLE leave_requests (
   },
   {
     slug: "payroll-database-schema",
-    title: "Payroll Database Schema Template | drawDB",
+    title: "Payroll Database Schema Template | SchemaForge",
     shortTitle: "Payroll Database Schema",
     description:
       "Explore a payroll database schema template for employees, compensation, pay runs, deductions, taxes, and disbursements.",
@@ -601,7 +601,7 @@ CREATE TABLE earnings (
   },
   {
     slug: "social-media-database-schema",
-    title: "Social Media Database Schema Template | drawDB",
+    title: "Social Media Database Schema Template | SchemaForge",
     shortTitle: "Social Media Database Schema",
     description:
       "Build a social media database schema template with users, posts, follows, comments, likes, feeds, and messaging entities.",

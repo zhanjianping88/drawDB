@@ -3,8 +3,9 @@ import Link from "next/link";
 import { createMetadata } from "@/lib/seo/metadata";
 
 export const metadata = createMetadata({
-  title: "Contact drawDB | Database Tools Support",
-  description: "Contact drawDB for feedback, partnerships, launch questions, or database tooling inquiries.",
+  title: "Contact SchemaForge | Database Tools Support",
+  description:
+    "Contact SchemaForge for feedback, partnerships, launch questions, or database tooling inquiries.",
   path: "/contact",
 });
 
@@ -19,8 +20,8 @@ export default function ContactPage() {
         </p>
         <p className="text-base leading-7 text-muted-foreground">
           Email:{" "}
-          <Link className="text-blue-200 hover:text-white" href="mailto:team@drawdb.example.com">
-            team@drawdb.example.com
+          <Link className="text-blue-200 hover:text-white" href="mailto:team@schemaforge.cc">
+            team@schemaforge.cc
           </Link>
         </p>
       </div>

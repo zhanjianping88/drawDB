@@ -9,7 +9,7 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { createMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = createMetadata({
-  title: "drawDB | Database Schema Generator, ERD Tool, and SQL Design Platform",
+  title: "SchemaForge | Database Schema Generator, ERD Tool, and SQL Design Platform",
   description:
     "Modern database schema tooling for ER diagrams, SQL generation, templates, and programmatic SEO growth.",
   path: "/",

@@ -57,8 +57,8 @@ export function HeroSection() {
               </h1>
               <p className="max-w-2xl text-lg leading-8 text-muted-foreground md:text-xl">
                 SchemaForge turns search-driven discovery into real product action with visual ERDs,
-                SQL export workflows, reusable templates, and a live drawDB editor embedded under
-                one brand.
+                SQL export workflows, reusable templates, and a live editor powered by drawDB
+                under one brand.
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">

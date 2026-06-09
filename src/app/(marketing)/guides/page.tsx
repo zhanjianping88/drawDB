@@ -6,7 +6,7 @@ import { guideSummaries } from "@/data/guides";
 import { createMetadata } from "@/lib/seo/metadata";
 
 export const metadata = createMetadata({
-  title: "Database Design Guides | drawDB",
+  title: "Database Design Guides | SchemaForge",
   description: "Read database design guides that connect schema tools, templates, and comparison pages into stronger topic clusters.",
   path: "/guides",
 });

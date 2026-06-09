@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: TemplatePageProps): Promise<M
 
   if (!template) {
     return createMetadata({
-      title: "Template Not Found | drawDB",
+      title: "Template Not Found | SchemaForge",
       description: "The requested database schema template could not be found.",
       path: "/templates",
       noIndex: true,
@@ -211,7 +211,7 @@ export default async function TemplateDetailPage({ params }: TemplatePageProps) 
                       Move from research to a real editable schema in one click.
                     </p>
                     <p className="mt-1 text-sm text-muted-foreground">
-                      Load this schema into the real drawDB editor and keep editing from there.
+                      Load this schema into the live SchemaForge editor and keep editing from there.
                     </p>
                   </div>
                   <div className="grid grid-cols-2 gap-3">

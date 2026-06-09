@@ -62,7 +62,7 @@ function compareFaqs(
     {
       question: "Can these comparison pages support future product conversion?",
       answer:
-        "Yes. They are designed to attract decision-stage searchers and then route them into tools, templates, and future product workflows under drawDB.",
+        "Yes. They are designed to attract decision-stage searchers and then route them into tools, templates, and future product workflows under SchemaForge.",
     },
   ];
 }
@@ -77,7 +77,7 @@ function page(config: Omit<ComparePage, "path">): ComparePage {
 export const comparePages: ComparePage[] = [
   page({
     slug: "mysql-vs-postgresql",
-    title: "MySQL vs PostgreSQL | Database Comparison | drawDB",
+    title: "MySQL vs PostgreSQL | Database Comparison | SchemaForge",
     h1: "MySQL vs PostgreSQL: which database is better for your next application?",
     description:
       "Compare MySQL and PostgreSQL across flexibility, performance patterns, relational features, and long-term schema design tradeoffs.",
@@ -157,17 +157,17 @@ export const comparePages: ComparePage[] = [
   }),
   page({
     slug: "drawdb-vs-dbdiagram",
-    title: "drawDB vs dbdiagram | ERD Tool Comparison | drawDB",
-    h1: "drawDB vs dbdiagram: which ERD tool is better for schema planning?",
+    title: "SchemaForge vs dbdiagram | ERD Tool Comparison | SchemaForge",
+    h1: "SchemaForge vs dbdiagram: which ERD tool is better for schema planning?",
     description:
-      "Compare drawDB and dbdiagram across ERD workflows, schema visualization, SEO-facing templates, and database design positioning.",
+      "Compare SchemaForge and dbdiagram across ERD workflows, schema visualization, SEO-facing templates, and database design positioning.",
     keyword: "drawdb vs dbdiagram",
-    leftName: "drawDB",
+    leftName: "SchemaForge",
     rightName: "dbdiagram",
     intro:
       "This comparison is for users evaluating ERD tooling workflows and deciding whether they want a pure diagram experience or a broader schema content and template ecosystem.",
     decisionSummary:
-      "Choose drawDB if you want a broader database tooling surface with SEO landing pages, templates, and schema education. Choose dbdiagram if you mainly want a focused diagramming workflow and already know that is your core use case.",
+      "Choose SchemaForge if you want a broader database tooling surface with SEO landing pages, templates, and schema education. Choose dbdiagram if you mainly want a focused diagramming workflow and already know that is your core use case.",
     table: [
       { label: "Primary focus", left: "Schema tooling platform", right: "Diagram-centric workflow" },
       { label: "Template ecosystem", left: "Growing template-led content system", right: "More tool-focused" },
@@ -205,7 +205,7 @@ export const comparePages: ComparePage[] = [
     featureBreakdown: [
       {
         title: "Platform breadth",
-        description: "drawDB is being positioned as more than an ERD page, with templates, tools, comparisons, and SEO acquisition built in.",
+        description: "SchemaForge is being positioned as more than an ERD page, with templates, tools, comparisons, and SEO acquisition built in.",
       },
       {
         title: "Diagram focus",
@@ -213,12 +213,12 @@ export const comparePages: ComparePage[] = [
       },
       {
         title: "Content-led growth",
-        description: "drawDB has stronger upside if comparison pages, template pages, and long-tail search traffic are part of the product strategy.",
+        description: "SchemaForge has stronger upside if comparison pages, template pages, and long-tail search traffic are part of the product strategy.",
       },
     ],
     faqs: compareFaqs(
-      "drawDB vs dbdiagram",
-      "dbdiagram may be better if you only care about focused ERD creation today, while drawDB is better if you want a wider schema tooling and content ecosystem around database design.",
+      "SchemaForge vs dbdiagram",
+      "dbdiagram may be better if you only care about focused ERD creation today, while SchemaForge is better if you want a wider schema tooling and content ecosystem around database design.",
       "Choose based on whether your priority is pure diagramming or a larger platform that combines tools, templates, education, and long-tail search discovery.",
     ),
     relatedToolSlugs: [
@@ -235,7 +235,7 @@ export const comparePages: ComparePage[] = [
   }),
   page({
     slug: "dbdiagram-vs-lucidchart",
-    title: "dbdiagram vs Lucidchart | Diagram Tool Comparison | drawDB",
+    title: "dbdiagram vs Lucidchart | Diagram Tool Comparison | SchemaForge",
     h1: "dbdiagram vs Lucidchart: which diagram tool fits database design better?",
     description:
       "Compare dbdiagram and Lucidchart for ER diagrams, database-specific workflows, flexibility, and broader diagramming use cases.",
@@ -311,7 +311,7 @@ export const comparePages: ComparePage[] = [
   }),
   page({
     slug: "erd-vs-uml",
-    title: "ERD vs UML | Modeling Comparison | drawDB",
+    title: "ERD vs UML | Modeling Comparison | SchemaForge",
     h1: "ERD vs UML: which modeling approach is better for database design?",
     description:
       "Compare ERD and UML for data modeling, schema planning, software architecture communication, and design intent.",
@@ -387,7 +387,7 @@ export const comparePages: ComparePage[] = [
   }),
   page({
     slug: "mysql-vs-mongodb",
-    title: "MySQL vs MongoDB | Database Comparison | drawDB",
+    title: "MySQL vs MongoDB | Database Comparison | SchemaForge",
     h1: "MySQL vs MongoDB: which database model is better for your app?",
     description:
       "Compare MySQL and MongoDB across relational structure, document flexibility, query patterns, and data-model tradeoffs.",
@@ -463,7 +463,7 @@ export const comparePages: ComparePage[] = [
   }),
   page({
     slug: "sqlite-vs-postgresql",
-    title: "SQLite vs PostgreSQL | Database Comparison | drawDB",
+    title: "SQLite vs PostgreSQL | Database Comparison | SchemaForge",
     h1: "SQLite vs PostgreSQL: which database is better for your project stage?",
     description:
       "Compare SQLite and PostgreSQL across deployment simplicity, relational depth, scalability expectations, and product maturity.",
@@ -538,7 +538,7 @@ export const comparePages: ComparePage[] = [
   }),
   page({
     slug: "supabase-vs-firebase",
-    title: "Supabase vs Firebase | Backend Platform Comparison | drawDB",
+    title: "Supabase vs Firebase | Backend Platform Comparison | SchemaForge",
     h1: "Supabase vs Firebase: which backend platform is better for database-centric products?",
     description:
       "Compare Supabase and Firebase across relational modeling, developer workflow, backend flexibility, and product architecture tradeoffs.",
@@ -614,7 +614,7 @@ export const comparePages: ComparePage[] = [
   }),
   page({
     slug: "prisma-vs-typeorm",
-    title: "Prisma vs TypeORM | ORM Comparison | drawDB",
+    title: "Prisma vs TypeORM | ORM Comparison | SchemaForge",
     h1: "Prisma vs TypeORM: which ORM workflow is better for your database stack?",
     description:
       "Compare Prisma and TypeORM across schema workflow, developer ergonomics, relational clarity, and database modeling tradeoffs.",
@@ -690,7 +690,7 @@ export const comparePages: ComparePage[] = [
   }),
   page({
     slug: "sql-vs-nosql",
-    title: "SQL vs NoSQL | Database Comparison | drawDB",
+    title: "SQL vs NoSQL | Database Comparison | SchemaForge",
     h1: "SQL vs NoSQL: which database approach is better for your product?",
     description:
       "Compare SQL and NoSQL across relational structure, flexibility, scaling patterns, and application data-model tradeoffs.",
@@ -766,7 +766,7 @@ export const comparePages: ComparePage[] = [
   }),
   page({
     slug: "database-schema-vs-erd",
-    title: "Database Schema vs ERD | Design Comparison | drawDB",
+    title: "Database Schema vs ERD | Design Comparison | SchemaForge",
     h1: "Database schema vs ERD: what is the difference and which matters first?",
     description:
       "Compare database schema and ERD concepts across design intent, implementation detail, communication, and workflow sequencing.",

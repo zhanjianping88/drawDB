@@ -55,7 +55,7 @@ function buildFaqs(subject: string, answerA: string, answerB: string): ToolFaq[]
     {
       question: "Can this workflow support future SQL export and diagram editing?",
       answer:
-        "Yes. These tool pages are designed as entry points into the future drawDB editor, where schema planning, diagram editing, and SQL-oriented workflows can connect more directly.",
+        "Yes. These tool pages are designed as entry points into the SchemaForge editor, where schema planning, diagram editing, and SQL-oriented workflows can connect more directly.",
     },
     {
       question: "Why include FAQs on tool landing pages?",
@@ -75,7 +75,7 @@ function tool(config: ToolConfig): ToolPage {
 export const toolPages: ToolPage[] = [
   tool({
     slug: "database-schema-generator",
-    title: "Database Schema Generator | Free Online Tool | drawDB",
+    title: "Database Schema Generator | Free Online Tool | SchemaForge",
     shortTitle: "Database Schema Generator",
     h1: "Free online database schema generator for faster relational design.",
     description:
@@ -169,7 +169,7 @@ CREATE TABLE projects (
   }),
   tool({
     slug: "sql-schema-generator",
-    title: "SQL Schema Generator | Free Online Tool | drawDB",
+    title: "SQL Schema Generator | Free Online Tool | SchemaForge",
     shortTitle: "SQL Schema Generator",
     h1: "Generate SQL schema structure from a clearer database design workflow.",
     description:
@@ -262,7 +262,7 @@ CREATE TABLE users (
   }),
   tool({
     slug: "mysql-er-diagram",
-    title: "MySQL ER Diagram Tool | Free Online Tool | drawDB",
+    title: "MySQL ER Diagram Tool | Free Online Tool | SchemaForge",
     shortTitle: "MySQL ER Diagram",
     h1: "Create a MySQL ER diagram online for cleaner schema planning.",
     description:
@@ -354,7 +354,7 @@ CREATE TABLE orders (
   }),
   tool({
     slug: "postgresql-schema-generator",
-    title: "PostgreSQL Schema Generator | Free Online Tool | drawDB",
+    title: "PostgreSQL Schema Generator | Free Online Tool | SchemaForge",
     shortTitle: "PostgreSQL Schema Generator",
     h1: "Generate PostgreSQL schema structure with a cleaner design-first workflow.",
     description:
@@ -447,7 +447,7 @@ CREATE TABLE memberships (
   }),
   tool({
     slug: "sqlite-database-designer",
-    title: "SQLite Database Designer | Free Online Tool | drawDB",
+    title: "SQLite Database Designer | Free Online Tool | SchemaForge",
     shortTitle: "SQLite Database Designer",
     h1: "Design SQLite databases online before you write the final schema.",
     description:
@@ -539,7 +539,7 @@ CREATE TABLE tasks (
   }),
   tool({
     slug: "online-database-designer",
-    title: "Online Database Designer | Free Web-Based Tool | drawDB",
+    title: "Online Database Designer | Free Web-Based Tool | SchemaForge",
     shortTitle: "Online Database Designer",
     h1: "Use an online database designer to plan schemas without leaving the browser.",
     description:
@@ -633,7 +633,7 @@ CREATE TABLE tasks (
   }),
   tool({
     slug: "database-diagram-maker",
-    title: "Database Diagram Maker | Free Online Tool | drawDB",
+    title: "Database Diagram Maker | Free Online Tool | SchemaForge",
     shortTitle: "Database Diagram Maker",
     h1: "Create a database diagram online for clearer schema structure and review.",
     description:
@@ -725,7 +725,7 @@ CREATE TABLE engagements (
   }),
   tool({
     slug: "er-diagram-tool",
-    title: "ER Diagram Tool | Free Online Tool | drawDB",
+    title: "ER Diagram Tool | Free Online Tool | SchemaForge",
     shortTitle: "ER Diagram Tool",
     h1: "Use an ER diagram tool to plan entities and relationships more clearly.",
     description:
@@ -818,7 +818,7 @@ CREATE TABLE posts (
   }),
   tool({
     slug: "sql-table-designer",
-    title: "SQL Table Designer | Free Online Tool | drawDB",
+    title: "SQL Table Designer | Free Online Tool | SchemaForge",
     shortTitle: "SQL Table Designer",
     h1: "Design SQL tables online before you commit them to production schema.",
     description:
@@ -907,7 +907,7 @@ CREATE TABLE posts (
   }),
   tool({
     slug: "database-design-tool",
-    title: "Database Design Tool | Free Online Tool | drawDB",
+    title: "Database Design Tool | Free Online Tool | SchemaForge",
     shortTitle: "Database Design Tool",
     h1: "Use a database design tool to plan structure before schema decisions harden.",
     description:
@@ -999,7 +999,7 @@ CREATE TABLE projects (
   }),
   tool({
     slug: "mysql-schema-designer",
-    title: "MySQL Schema Designer | Free Online Tool | drawDB",
+    title: "MySQL Schema Designer | Free Online Tool | SchemaForge",
     shortTitle: "MySQL Schema Designer",
     h1: "Design MySQL schema structure with a workflow built for relational clarity.",
     description:
@@ -1091,7 +1091,7 @@ CREATE TABLE purchase_orders (
   }),
   tool({
     slug: "postgresql-erd-tool",
-    title: "Free Online PostgreSQL ERD Tool and SQL Generator | drawDB",
+    title: "Free Online PostgreSQL ERD Tool and SQL Generator | SchemaForge",
     shortTitle: "PostgreSQL ERD Tool",
     h1: "Free online PostgreSQL ERD tool for schema planning and SQL-first design.",
     description:
@@ -1103,7 +1103,7 @@ CREATE TABLE purchase_orders (
       "postgresql schema diagram",
     ],
     intro:
-      "Use drawDB to design PostgreSQL databases with a visual entity relationship workflow, structured schema planning, and production-friendly naming conventions.",
+      "Use SchemaForge to design PostgreSQL databases with a visual entity relationship workflow, structured schema planning, and production-friendly naming conventions.",
     category: "engine",
     categoryLabel: "Database Engines",
     database: "PostgreSQL",
@@ -1113,7 +1113,7 @@ CREATE TABLE purchase_orders (
     benefits: [
       "Map entities, primary keys, and foreign keys before writing SQL migrations.",
       "Create cleaner Postgres schemas for ecommerce, SaaS, CRM, and analytics products.",
-      "Use the page as a search-optimized entry point into the future drawDB editor.",
+      "Use the page as a search-optimized entry point into the SchemaForge editor.",
     ],
     steps: [
       {
@@ -1195,7 +1195,7 @@ CREATE TABLE orders (
   }),
   tool({
     slug: "sqlite-schema-generator",
-    title: "SQLite Schema Generator | Free Online Tool | drawDB",
+    title: "SQLite Schema Generator | Free Online Tool | SchemaForge",
     shortTitle: "SQLite Schema Generator",
     h1: "Generate SQLite schema structure with a simple design-first workflow.",
     description:
@@ -1287,7 +1287,7 @@ CREATE TABLE entries (
   }),
   tool({
     slug: "sql-diagram-generator",
-    title: "SQL Diagram Generator | Free Online Tool | drawDB",
+    title: "SQL Diagram Generator | Free Online Tool | SchemaForge",
     shortTitle: "SQL Diagram Generator",
     h1: "Generate SQL diagrams from relational structure and schema planning intent.",
     description:
@@ -1380,7 +1380,7 @@ CREATE TABLE invoices (
   }),
   tool({
     slug: "database-relationship-diagram-tool",
-    title: "Database Relationship Diagram Tool | Free Online Tool | drawDB",
+    title: "Database Relationship Diagram Tool | Free Online Tool | SchemaForge",
     shortTitle: "Database Relationship Diagram Tool",
     h1: "Map database relationships visually before schema complexity becomes a problem.",
     description:
@@ -1472,7 +1472,7 @@ CREATE TABLE comments (
   }),
   tool({
     slug: "prisma-schema-generator",
-    title: "Prisma Schema Generator | Free Online Tool | drawDB",
+    title: "Prisma Schema Generator | Free Online Tool | SchemaForge",
     shortTitle: "Prisma Schema Generator",
     h1: "Plan Prisma schema structure from a cleaner relational design workflow.",
     description:
@@ -1563,7 +1563,7 @@ CREATE TABLE users (
   }),
   tool({
     slug: "supabase-schema-designer",
-    title: "Supabase Schema Designer | Free Online Tool | drawDB",
+    title: "Supabase Schema Designer | Free Online Tool | SchemaForge",
     shortTitle: "Supabase Schema Designer",
     h1: "Design Supabase schema structure with a clearer Postgres-oriented workflow.",
     description:
@@ -1654,7 +1654,7 @@ CREATE TABLE workspaces (
   }),
   tool({
     slug: "mongodb-schema-design-tool",
-    title: "MongoDB Schema Design Tool | Free Planning Tool | drawDB",
+    title: "MongoDB Schema Design Tool | Free Planning Tool | SchemaForge",
     shortTitle: "MongoDB Schema Design Tool",
     h1: "Use a MongoDB schema design tool to plan document structure more deliberately.",
     description:
@@ -1741,7 +1741,7 @@ CREATE TABLE workspaces (
   }),
   tool({
     slug: "database-normalization-tool",
-    title: "Database Normalization Tool | Free Planning Tool | drawDB",
+    title: "Database Normalization Tool | Free Planning Tool | SchemaForge",
     shortTitle: "Database Normalization Tool",
     h1: "Use a database normalization tool to reduce duplicated structure and schema drift.",
     description:
@@ -1836,7 +1836,7 @@ CREATE TABLE invoices (
   }),
   tool({
     slug: "ddl-generator",
-    title: "DDL Generator | Free SQL Structure Tool | drawDB",
+    title: "DDL Generator | Free SQL Structure Tool | SchemaForge",
     shortTitle: "DDL Generator",
     h1: "Generate cleaner DDL from a better database design workflow.",
     description:

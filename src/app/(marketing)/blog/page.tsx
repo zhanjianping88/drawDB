@@ -1,7 +1,7 @@
 import { createMetadata } from "@/lib/seo/metadata";
 
 export const metadata = createMetadata({
-  title: "drawDB Blog | Database Design and SQL Content",
+  title: "SchemaForge Blog | Database Design and SQL Content",
   description: "Technical content for schema design, ERD workflows, and SQL architecture topics.",
   path: "/blog",
 });

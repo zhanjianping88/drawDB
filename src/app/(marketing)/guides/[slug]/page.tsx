@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
 
   if (!guide) {
     return createMetadata({
-      title: "Guide Not Found | drawDB",
+      title: "Guide Not Found | SchemaForge",
       description: "The requested guide could not be found.",
       path: "/guides",
       noIndex: true,

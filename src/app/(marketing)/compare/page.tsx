@@ -6,7 +6,7 @@ import { compareSummaries } from "@/data/compare";
 import { createMetadata } from "@/lib/seo/metadata";
 
 export const metadata = createMetadata({
-  title: "Database and ERD Comparisons | drawDB",
+  title: "Database and ERD Comparisons | SchemaForge",
   description: "Compare databases, ORMs, ERD tools, and schema workflows with decision-stage comparison pages.",
   path: "/compare",
 });

@@ -5,7 +5,7 @@ import { TemplateGallery } from "@/components/marketing/template-gallery";
 import { AdPlaceholder } from "@/components/ads/ad-placeholder";
 
 export const metadata = createMetadata({
-  title: "drawDB Templates | Database Schema Templates",
+  title: "SchemaForge Templates | Database Schema Templates",
   description: "Browse reusable schema templates for common product and business use cases.",
   path: "/templates",
 });

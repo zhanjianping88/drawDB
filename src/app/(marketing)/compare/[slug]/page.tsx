@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: ComparePageProps): Promise<Me
 
   if (!compare) {
     return createMetadata({
-      title: "Comparison Not Found | drawDB",
+      title: "Comparison Not Found | SchemaForge",
       description: "The requested comparison page could not be found.",
       path: "/compare",
       noIndex: true,

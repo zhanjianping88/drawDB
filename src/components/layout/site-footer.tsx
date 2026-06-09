@@ -10,7 +10,7 @@ export function SiteFooter() {
           <h2 className="font-heading text-xl font-semibold">{siteConfig.name}</h2>
           <p className="max-w-md text-sm leading-7 text-muted-foreground">
             A modern database tooling brand built for ER diagrams, schema generation, templates,
-            and SEO-led growth.
+            and SEO-led growth, powered by the drawDB editor core.
           </p>
         </div>
         <div>

@@ -70,11 +70,11 @@ export function buildArticleSchema({
     mainEntityOfPage: getCanonicalUrl(path),
     author: {
       "@type": "Organization",
-      name: "drawDB",
+      name: "SchemaForge",
     },
     publisher: {
       "@type": "Organization",
-      name: "drawDB",
+      name: "SchemaForge",
     },
   };
 }
