@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 
 type SectionHeadingProps = {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   description: string;
   align?: "left" | "center";
@@ -17,10 +17,20 @@ export function SectionHeading({
 
   return (
     <div className={`max-w-2xl space-y-5 ${alignment}`}>
-      <div className={align === "center" ? "mx-auto h-px w-28 bg-gradient-to-r from-transparent via-cyan-300/60 to-transparent" : "h-px w-24 bg-gradient-to-r from-cyan-300/70 to-transparent"} />
-      <Badge className={align === "center" ? "mx-auto" : ""} variant="blue">
-        {eyebrow}
-      </Badge>
+      {eyebrow ? (
+        <>
+          <div
+            className={
+              align === "center"
+                ? "mx-auto h-px w-28 bg-gradient-to-r from-transparent via-cyan-300/60 to-transparent"
+                : "h-px w-24 bg-gradient-to-r from-cyan-300/70 to-transparent"
+            }
+          />
+          <Badge className={align === "center" ? "mx-auto" : ""} variant="blue">
+            {eyebrow}
+          </Badge>
+        </>
+      ) : null}
       <div className="space-y-3">
         <h2 className="font-heading text-3xl font-semibold tracking-tight text-white md:text-4xl">
           {title}

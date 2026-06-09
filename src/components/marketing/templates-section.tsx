@@ -9,7 +9,7 @@ export function TemplatesSection() {
         <SectionHeading
           description="Template pages widen keyword coverage and create direct bridges from informational search intent into the product."
           eyebrow="Database Templates"
-          title="Schema templates that work as both acquisition assets and product entry points."
+          title="Schema templates should feel like launch pads, not a shelf of identical cards."
         />
         <TemplateGallery templates={templateSummaries.slice(0, 4)} />
       </div>

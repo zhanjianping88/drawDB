@@ -24,6 +24,18 @@ type ComparePageProps = {
   }>;
 };
 
+function MetaStrip({ items }: { items: string[] }) {
+  return (
+    <div className="flex flex-wrap gap-3 text-sm text-muted-foreground">
+      {items.map((item) => (
+        <span className="rounded-full border border-white/10 bg-black/30 px-3 py-1.5" key={item}>
+          {item}
+        </span>
+      ))}
+    </div>
+  );
+}
+
 export async function generateStaticParams() {
   return comparePages.map((page) => ({ slug: page.slug }));
 }
@@ -91,7 +103,7 @@ export default async function CompareDetailPage({ params }: ComparePageProps) {
       <section className="py-16 md:py-20">
         <div className="container-shell space-y-8">
           <Breadcrumbs items={breadcrumbs} />
-          <div className="grid gap-8 xl:grid-cols-[1.05fr,0.95fr]">
+          <div className="grid gap-8 xl:grid-cols-[1.02fr,0.98fr]">
             <div className="space-y-6">
               <Badge>
                 <Scale className="h-3.5 w-3.5" />
@@ -103,6 +115,13 @@ export default async function CompareDetailPage({ params }: ComparePageProps) {
                 </h1>
                 <p className="max-w-2xl text-lg leading-8 text-muted-foreground">{compare.intro}</p>
               </div>
+              <MetaStrip
+                items={[
+                  "Decision-stage search",
+                  `${compare.leftName} vs ${compare.rightName}`,
+                  "Internal link hub",
+                ]}
+              />
               <div className="flex flex-col gap-3 sm:flex-row">
                 <Button asChild size="lg">
                   <Link href="/compare">Browse Comparisons</Link>
@@ -111,18 +130,31 @@ export default async function CompareDetailPage({ params }: ComparePageProps) {
                   <Link href="/tools">Explore Related Tools</Link>
                 </Button>
               </div>
-              <Card className="p-6">
-                <p className="font-heading text-xl font-semibold text-white">Quick answer</p>
-                <p className="mt-3 text-sm leading-7 text-muted-foreground">{compare.decisionSummary}</p>
-              </Card>
+              <div className="grid gap-4 md:grid-cols-3">
+                <div className="mesh-card rounded-[1.5rem] border border-white/10 p-4">
+                  <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">Intent</p>
+                  <p className="mt-2 text-sm leading-6 text-white">Which option fits a real workflow better?</p>
+                </div>
+                <div className="mesh-card rounded-[1.5rem] border border-white/10 p-4">
+                  <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">Reader stage</p>
+                  <p className="mt-2 text-sm leading-6 text-white">Researching tradeoffs before selecting a stack.</p>
+                </div>
+                <div className="mesh-card rounded-[1.5rem] border border-white/10 p-4">
+                  <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">Output</p>
+                  <p className="mt-2 text-sm leading-6 text-white">A clearer choice plus next-step links.</p>
+                </div>
+              </div>
             </div>
+
             <div className="space-y-6">
-              <Card className="overflow-hidden">
+              <Card className="mesh-card panel-glow overflow-hidden border-white/10">
                 <CardHeader>
-                  <Badge variant="blue">Comparison Table</Badge>
-                  <CardTitle className="mt-4">{compare.leftName} vs {compare.rightName}</CardTitle>
+                  <Badge variant="blue">Decision Snapshot</Badge>
+                  <CardTitle className="mt-4">
+                    {compare.leftName} vs {compare.rightName}
+                  </CardTitle>
                   <CardDescription>
-                    Use this table to understand the decision quickly before reading the deeper analysis.
+                    Use this matrix to understand the practical difference quickly before reading the deeper breakdown.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="overflow-x-auto">
@@ -146,6 +178,10 @@ export default async function CompareDetailPage({ params }: ComparePageProps) {
                   </table>
                 </CardContent>
               </Card>
+              <Card className="mesh-card rounded-[1.6rem] border border-white/10 p-6">
+                <p className="font-heading text-xl font-semibold text-white">Quick answer</p>
+                <p className="mt-3 text-sm leading-7 text-muted-foreground">{compare.decisionSummary}</p>
+              </Card>
               <AdPlaceholder className="min-h-[150px]" label="Comparison Hero Ad Zone" />
             </div>
           </div>
@@ -154,18 +190,20 @@ export default async function CompareDetailPage({ params }: ComparePageProps) {
 
       <section className="py-20">
         <div className="container-shell grid gap-8 xl:grid-cols-2">
-          <Card className="p-6">
+          <Card className="mesh-card border-white/10 p-6">
             <CardHeader className="px-0 pt-0">
-              <CardTitle>{compare.leftName} pros and cons</CardTitle>
+              <CardTitle>{compare.leftName} strengths and constraints</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6 px-0 pb-0">
               <div>
                 <p className="mb-3 text-sm font-semibold text-white">Pros</p>
                 <div className="space-y-3">
                   {compare.leftPros.map((item) => (
-                    <div className="flex gap-3 rounded-2xl border border-white/8 bg-white/3 p-4" key={item}>
-                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-cyan-300" />
-                      <p className="text-sm leading-6 text-muted-foreground">{item}</p>
+                    <div className="rounded-[1.25rem] border border-white/8 bg-black/25 p-4" key={item}>
+                      <div className="flex gap-3">
+                        <Check className="mt-0.5 h-4 w-4 shrink-0 text-cyan-300" />
+                        <p className="text-sm leading-6 text-muted-foreground">{item}</p>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -174,9 +212,11 @@ export default async function CompareDetailPage({ params }: ComparePageProps) {
                 <p className="mb-3 text-sm font-semibold text-white">Cons</p>
                 <div className="space-y-3">
                   {compare.leftCons.map((item) => (
-                    <div className="flex gap-3 rounded-2xl border border-white/8 bg-white/3 p-4" key={item}>
-                      <Minus className="mt-0.5 h-4 w-4 shrink-0 text-amber-300" />
-                      <p className="text-sm leading-6 text-muted-foreground">{item}</p>
+                    <div className="rounded-[1.25rem] border border-white/8 bg-black/25 p-4" key={item}>
+                      <div className="flex gap-3">
+                        <Minus className="mt-0.5 h-4 w-4 shrink-0 text-amber-300" />
+                        <p className="text-sm leading-6 text-muted-foreground">{item}</p>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -184,18 +224,20 @@ export default async function CompareDetailPage({ params }: ComparePageProps) {
             </CardContent>
           </Card>
 
-          <Card className="p-6">
+          <Card className="mesh-card border-white/10 p-6">
             <CardHeader className="px-0 pt-0">
-              <CardTitle>{compare.rightName} pros and cons</CardTitle>
+              <CardTitle>{compare.rightName} strengths and constraints</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6 px-0 pb-0">
               <div>
                 <p className="mb-3 text-sm font-semibold text-white">Pros</p>
                 <div className="space-y-3">
                   {compare.rightPros.map((item) => (
-                    <div className="flex gap-3 rounded-2xl border border-white/8 bg-white/3 p-4" key={item}>
-                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-cyan-300" />
-                      <p className="text-sm leading-6 text-muted-foreground">{item}</p>
+                    <div className="rounded-[1.25rem] border border-white/8 bg-black/25 p-4" key={item}>
+                      <div className="flex gap-3">
+                        <Check className="mt-0.5 h-4 w-4 shrink-0 text-cyan-300" />
+                        <p className="text-sm leading-6 text-muted-foreground">{item}</p>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -204,9 +246,11 @@ export default async function CompareDetailPage({ params }: ComparePageProps) {
                 <p className="mb-3 text-sm font-semibold text-white">Cons</p>
                 <div className="space-y-3">
                   {compare.rightCons.map((item) => (
-                    <div className="flex gap-3 rounded-2xl border border-white/8 bg-white/3 p-4" key={item}>
-                      <Minus className="mt-0.5 h-4 w-4 shrink-0 text-amber-300" />
-                      <p className="text-sm leading-6 text-muted-foreground">{item}</p>
+                    <div className="rounded-[1.25rem] border border-white/8 bg-black/25 p-4" key={item}>
+                      <div className="flex gap-3">
+                        <Minus className="mt-0.5 h-4 w-4 shrink-0 text-amber-300" />
+                        <p className="text-sm leading-6 text-muted-foreground">{item}</p>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -220,26 +264,31 @@ export default async function CompareDetailPage({ params }: ComparePageProps) {
         <div className="container-shell grid gap-8 xl:grid-cols-[1.05fr,0.95fr]">
           <div className="space-y-8">
             <SectionHeading
-              eyebrow="Use Cases"
-              title={`When ${compare.leftName} makes more sense vs when ${compare.rightName} makes more sense`}
-              description="Good comparison pages should not only say what differs, but explain the kinds of products or teams each option fits best."
+              title={`When ${compare.leftName} makes more sense and when ${compare.rightName} makes more sense`}
+              description="The goal is not to crown a universal winner. It is to match the option to the product, team, and workflow behind the query."
             />
             <div className="grid gap-6 md:grid-cols-2">
-              <Card className="p-6">
+              <Card className="mesh-card border-white/10 p-6">
                 <CardTitle className="text-xl">{compare.leftName}</CardTitle>
                 <div className="mt-4 space-y-3">
                   {compare.useCases.left.map((item) => (
-                    <div className="rounded-2xl border border-white/8 bg-white/3 px-4 py-3 text-sm leading-6 text-muted-foreground" key={item}>
+                    <div
+                      className="rounded-[1.25rem] border border-white/8 bg-black/25 px-4 py-3 text-sm leading-6 text-muted-foreground"
+                      key={item}
+                    >
                       {item}
                     </div>
                   ))}
                 </div>
               </Card>
-              <Card className="p-6">
+              <Card className="mesh-card border-white/10 p-6">
                 <CardTitle className="text-xl">{compare.rightName}</CardTitle>
                 <div className="mt-4 space-y-3">
                   {compare.useCases.right.map((item) => (
-                    <div className="rounded-2xl border border-white/8 bg-white/3 px-4 py-3 text-sm leading-6 text-muted-foreground" key={item}>
+                    <div
+                      className="rounded-[1.25rem] border border-white/8 bg-black/25 px-4 py-3 text-sm leading-6 text-muted-foreground"
+                      key={item}
+                    >
                       {item}
                     </div>
                   ))}
@@ -249,10 +298,11 @@ export default async function CompareDetailPage({ params }: ComparePageProps) {
           </div>
           <div className="space-y-6">
             <AdPlaceholder className="min-h-[180px]" label="Use Cases Ad Zone" />
-            <Card className="p-6">
-              <p className="font-heading text-xl font-semibold text-white">Why comparison pages work</p>
+            <Card className="mesh-card rounded-[1.6rem] border border-white/10 p-6">
+              <p className="font-heading text-xl font-semibold text-white">Why this section matters</p>
               <p className="mt-3 text-sm leading-7 text-muted-foreground">
-                Decision-stage searchers want clear tradeoffs, practical fit, and links into deeper tool or template workflows. That makes comparisons a strong SEO and conversion format.
+                Searchers at this stage usually know both names already. What they need is fit: team shape, project
+                complexity, and tradeoff tolerance.
               </p>
             </Card>
           </div>
@@ -262,13 +312,12 @@ export default async function CompareDetailPage({ params }: ComparePageProps) {
       <section className="py-20">
         <div className="container-shell space-y-10">
           <SectionHeading
-            eyebrow="Feature Breakdown"
-            title={`What really matters in the ${compare.leftName} vs ${compare.rightName} decision`}
-            description="Feature breakdowns should help users think beyond brand recognition and into real architectural or workflow tradeoffs."
+            title={`What actually drives the ${compare.leftName} vs ${compare.rightName} decision`}
+            description="This feature breakdown pushes beyond brand familiarity into the dimensions that typically decide the stack."
           />
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {compare.featureBreakdown.map((item) => (
-              <Card className="p-6" key={item.title}>
+              <Card className="mesh-card border-white/10 p-6" key={item.title}>
                 <CardTitle className="text-xl">{item.title}</CardTitle>
                 <p className="mt-3 text-sm leading-7 text-muted-foreground">{item.description}</p>
               </Card>
@@ -281,13 +330,12 @@ export default async function CompareDetailPage({ params }: ComparePageProps) {
         <div className="container-shell grid gap-8 xl:grid-cols-[0.95fr,1.05fr]">
           <div className="space-y-6">
             <SectionHeading
-              eyebrow="FAQ"
               title={`Frequently asked questions about ${compare.leftName} vs ${compare.rightName}`}
               description="These FAQs support both comparison-stage search intent and FAQ structured data."
             />
             <AdPlaceholder className="min-h-[180px]" label="Compare FAQ Ad Zone" />
           </div>
-          <Card className="p-6">
+          <Card className="mesh-card panel-glow border-white/10 p-6">
             <Accordion collapsible type="single">
               {compare.faqs.map((faq, index) => (
                 <AccordionItem key={faq.question} value={`faq-${index}`}>
@@ -304,13 +352,12 @@ export default async function CompareDetailPage({ params }: ComparePageProps) {
         <div className="container-shell grid gap-8 xl:grid-cols-2">
           <div className="space-y-8">
             <SectionHeading
-              eyebrow="Related Tools"
               title="Related database tools for deeper research"
-              description="Comparison pages should route decision-stage visitors into concrete schema and diagram workflows."
+              description="Decision pages should move naturally into product workflows, not end at abstract comparison."
             />
             <div className="grid gap-6">
               {relatedTools.map((tool) => (
-                <Card className="p-6" key={tool.slug}>
+                <Card className="mesh-card border-white/10 p-6" key={tool.slug}>
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <div className="mb-3 flex items-center gap-2">
@@ -332,16 +379,17 @@ export default async function CompareDetailPage({ params }: ComparePageProps) {
           </div>
           <div className="space-y-8">
             <SectionHeading
-              eyebrow="Related Templates"
               title="Related schema templates to ground the decision"
-              description="Template links help comparison pages stay practical and move users from abstract choices into real database examples."
+              description="Template links keep the comparison practical by giving readers a concrete model to inspect next."
             />
             <div className="grid gap-6">
               {relatedTemplates.map((template) => (
-                <Card className="p-6" key={template.slug}>
+                <Card className="mesh-card border-white/10 p-6" key={template.slug}>
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <Badge className="mb-3" variant="muted">{template.database}</Badge>
+                      <Badge className="mb-3" variant="muted">
+                        {template.database}
+                      </Badge>
                       <h2 className="font-heading text-xl font-semibold text-white">{template.title}</h2>
                       <p className="mt-2 text-sm leading-7 text-muted-foreground">{template.description}</p>
                     </div>

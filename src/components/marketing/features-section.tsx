@@ -8,7 +8,6 @@ export function FeaturesSection() {
       <div className="container-shell space-y-10">
         <SectionHeading
           description="The platform layer should look opinionated and technical, with clearer product hierarchy than a generic six-card grid."
-          eyebrow="Feature Grid"
           title="A product foundation that feels deliberate, technical, and launch-ready."
         />
         <div className="grid gap-6 xl:grid-cols-[1.1fr,0.9fr]">

@@ -20,7 +20,6 @@ export function EditorPreviewSection() {
         <Card className="mesh-card panel-glow overflow-hidden p-6">
           <SectionHeading
             description="The marketing site now routes into a real embedded drawDB workspace under /app, so visitors can move from discovery into action."
-            eyebrow="Editor Preview"
             title="A sharper workflow preview that explains what users actually do next."
           />
           <div className="mt-8 grid gap-6 lg:grid-cols-[0.72fr,1.28fr]">

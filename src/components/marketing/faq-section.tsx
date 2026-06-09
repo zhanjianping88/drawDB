@@ -11,7 +11,6 @@ export function FaqSection() {
         <div className="space-y-6">
           <SectionHeading
             description="Keep FAQ content useful enough for search and concrete enough to reassure serious builders that the platform solves a real workflow."
-            eyebrow="FAQ"
             title="Answer the adoption questions before the user has to ask them."
           />
           <Card className="mesh-card p-6">

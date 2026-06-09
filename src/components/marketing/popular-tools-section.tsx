@@ -11,7 +11,6 @@ export function PopularToolsSection() {
       <div className="container-shell space-y-10">
         <SectionHeading
           description="Start with the highest-intent acquisition pages and give each keyword a credible, product-led destination."
-          eyebrow="Popular Tools"
           title="High-intent routes that feel like product gateways, not content dead ends."
         />
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
